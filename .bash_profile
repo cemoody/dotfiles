@@ -49,3 +49,5 @@ export DATABASE_NAME_HIVE='wd_cemoody'
 export PYTHONPATH=$PYTHONPATH:/Users/cemoody/Development/data-science
 export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/
 
+#turn on VIM modw
+set -o vi
