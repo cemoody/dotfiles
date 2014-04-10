@@ -28,12 +28,19 @@ fi
 
 . ~/.dotfiles/z/z.sh
 
+if [ -z "$__git_ps1" ]; 
+then 
+	echo "could not find Square default setup"
+else 
+	echo "using git PS1"
+	export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
+fi
+
 alias unity="ssh-add && ssh -Nv -L3306:localhost:3306 fia17.sjc1b.square"
 alias unity20='ssh-add && ssh -Nv -L3307:localhost:3306 fia20.sjc1b.square'
 alias pi='ssh pi@chrisemoody.no-ip.biz'
 
 export EDITOR=vim
-export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
 export DATABASE_HOST_HIVE='gun7.sjc1c.square'
 export DATABASE_USERNAME_HIVE='cemoody'
 export DATABASE_PASSWORD_HIVE='anything'
