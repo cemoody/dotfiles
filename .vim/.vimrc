@@ -1,5 +1,5 @@
 "pathogen
-call pathogen#infect()
+call pathogen#infect("~/.vim/bundle")
 call pathogen#helptags()
 
 "vim behavoir
