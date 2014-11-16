@@ -112,3 +112,5 @@ set encoding=utf-8
 let g:airline#extensions#bufferline#overwrite_variables = 0
 " bufferline should *not* print out to the command line
 let g:bufferline_echo = 0
+let g:bufferline_active_buffer_left = ''
+let g:bufferline_active_buffer_right = ''
