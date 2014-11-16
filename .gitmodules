@@ -4,3 +4,6 @@
 [submodule ".vim/.oh-my-zsh"]
 	path = .vim/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".vim/color-schemes"]
+	path = .vim/color-schemes
+	url = https://github.com/chrishunt/color-schemes.git
