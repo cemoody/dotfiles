@@ -97,3 +97,6 @@ export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/R
 export PS1_bac=$PS1
 source ~/anaconda/bin/activate ~/anaconda 2>&1 | grep -v anaconda
 export PS1=$PS1_bac
+
+# iia6 mods
+unset LS_COLORS #iia6 reads the sys defaults in 

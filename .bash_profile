@@ -55,3 +55,6 @@ source ~/anaconda/bin/activate ~/anaconda
 
 #turn on VIM modw
 # set -o vi
+
+# this resets LS colors on iia6 machines
+unset LS_COLORS
