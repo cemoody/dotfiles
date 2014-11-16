@@ -1,0 +1,35 @@
+#######################################################
+# bootstrap Square zshrc; please don't change this bit.
+#######################################################
+if [[ -d "$HOME/Development" ]]; then
+  SQUARE_HOME=$HOME/Development
+fi
+export SQUARE_HOME
+if [[ -f "$SQUARE_HOME/config_files/square/zshrc" ]]; then
+  source $SQUARE_HOME/config_files/square/zshrc
+fi
+#######################################################
+
+
+###########################################
+# Feel free to make your own changes below.
+###########################################
+
+# uncomment to automatically `bundle exec` common ruby commands
+# if [[ -f "$SQUARE_HOME/config_files/square/bundler-exec.sh"]]; then
+#   source $SQUARE_HOME/config_files/square/bundler-exec.sh
+# fi
+
+if [ -e "$HOME/.aliases" ]; then
+  source "$HOME/.aliases"
+fi
+
+if [ -e "$HOME/.myaliases" ]; then
+  source "$HOME/.myaliases"
+fi
+
+if [ -e "$HOME/.localaliases" ]; then
+  source "$HOME/.localaliases"
+fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
