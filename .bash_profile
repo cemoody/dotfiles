@@ -22,19 +22,19 @@ fi
 # pair $USER >/dev/null
 
 # Print the current git author when the shell loads
-if [[ -n $(which git) ]]; then
-  printf "${COLOR_LIGHT_CYAN}Current git author:${COLOR_WHITE} ${GIT_AUTHOR_NAME:-$(git config user.name)} <${GIT_AUTHOR_EMAIL:-$(git config user.email)}>\n${COLOR_NC}"
-fi
+# if [[ -n $(which git) ]]; then
+#   printf "${COLOR_LIGHT_CYAN}Current git author:${COLOR_WHITE} ${GIT_AUTHOR_NAME:-$(git config user.name)} <${GIT_AUTHOR_EMAIL:-$(git config user.email)}>\n${COLOR_NC}"
+# fi
 
 . ~/.dotfiles/z/z.sh
 
-if [ -z "$__git_ps1" ]; 
-then 
-	echo "could not find Square default setup"
-else 
-	echo "using git PS1"
-	export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
-fi
+# if [ -z "$__git_ps1" ]; 
+# then 
+# 	echo "could not find Square default setup"
+# else 
+# 	echo "using git PS1"
+# 	export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
+# fi
 
 alias unity25="ssh-add && ssh -Nv -L3306:localhost:3306 fia25.sjc1b.square"
 alias unity26='ssh-add && ssh -Nv -L3307:localhost:3306 fia26.sjc1b.square'
@@ -54,4 +54,4 @@ export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
 
 
 #turn on VIM modw
-set -o vi
+# set -o vi
