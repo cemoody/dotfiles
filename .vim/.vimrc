@@ -1,7 +1,3 @@
-"pathogen
-call pathogen#infect("~/.vim/bundle")
-call pathogen#helptags()
-
 "vim behavoir
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
@@ -34,50 +30,21 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <C-S-Tab> :bprevious<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
-
 "enable conctext senseitve completion
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
-
-"colorscheme
-set t_Co=256
-set number
-set background=dark
-colorscheme solarized
-if &diff
-    colorscheme evening
-    set cursorline
-    hi CursorLine cterm=NONE ctermbg=black guibg=#202020
-endif
-hi SyntasticError cterm=bold,undercurl ctermfg=None ctermbg=NONE 
-hi Normal ctermfg=gray "the normal font is way too dim 
-
-"switch to the pastels theme
-colorscheme pastels_coloration_v02
-set noantialias
 
 "mouse
 if has("mouse")
     set mouse=a
 endif
 
-
-"Staus/Powerline
-let g:airline_powerline_fonts = 1
-set laststatus=2
-set encoding=utf-8
-"let g:Powerline_symbols = 'fancy'
-
 " Turn of highlighting after a search
 map ,, :nohl
 
-
 " always have some lines of text when scrolling
 set scrolloff=5
-
-"vimdiff needs a ddif color scheme
-"highlight every line
 
 "set tabs for python
 set ts=4
@@ -97,6 +64,10 @@ nmap <leader>l :set list!<CR>
  
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+"switch to the pastels theme
+colorscheme pastels_coloration_v02
+set noantialias
 
 " For usung Base16
 set background=dark
@@ -122,6 +93,11 @@ set timeoutlen=300 ttimeoutlen=0
 
 "hoping to fix the clipboard
 set clipboard=unnamed
+
+"airline
+let g:airline_powerline_fonts = 1
+set laststatus=2
+set encoding=utf-8
 
 "use bufferline to display inline buffers
 let g:airline#extensions#bufferline#overwrite_variables = 0
