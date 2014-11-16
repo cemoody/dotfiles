@@ -2,6 +2,7 @@
 if [ -d "$HOME/.dotfiles" ]; then
     cd $HOME/.dotfiles
     git pull origin master -q | grep -v 'Already up-to-date'
+    git submodule update --init --recursive
 fi
 
 # Path to your oh-my-zsh installation.
