@@ -123,5 +123,5 @@ set timeoutlen=300 ttimeoutlen=0
 "hoping to fix the clipboard
 set clipboard=unnamed
 
-"airline displays all buffers
-let g:airline#extensions#tabline#enabled = 1
+"use bufferline to display inline buffers
+let g:airline#extensions#bufferline#overwrite_variables = 0
