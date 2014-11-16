@@ -5,6 +5,8 @@ if [ -d "$HOME/.dotfiles" ]; then
     git submodule update --init --recursive
 fi
 
+export ZSH_CUSTOM=$HOME/.dotfiles/zsh_custom
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -116,3 +118,4 @@ if [[ `hostname -s` = iia* ]]; then
     export VIMRUNTIME=~/app/vim/runtime
     export PATH=~/app/vim/src/:$PATH
 fi
+
