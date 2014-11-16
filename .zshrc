@@ -78,3 +78,22 @@ export PATH="/Users/cemoody/anaconda/bin:/Users/cemoody/.rvm/gems/ruby-2.0.0-p35
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+. ~/.dotfiles/z/z.sh
+
+alias unity25="ssh-add && ssh -Nv -L3306:localhost:3306 fia25.sjc1b.square"
+alias unity26='ssh-add && ssh -Nv -L3307:localhost:3306 fia26.sjc1b.square'
+alias pi='ssh pi@chrisemoody.no-ip.biz'
+
+export EDITOR=vim
+export DATABASE_HOST_HIVE='gun7.sjc1c.square'
+export DATABASE_USERNAME_HIVE='cemoody'
+export DATABASE_PASSWORD_HIVE='anything'
+export DATABASE_PORT_HIVE=10000
+export DATABASE_NAME_HIVE='wd_cemoody'
+export PYTHONPATH=$PYTHONPATH:/Users/cemoody/Development/data-science
+export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/
+
+export PS1_bac=$PS1
+source ~/anaconda/bin/activate ~/anaconda
+export PS1=$PS1_bac
