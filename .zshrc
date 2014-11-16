@@ -1,3 +1,9 @@
+# pull .dotfiles from git
+if [ -d "$HOME/.dotfiles" ]; then
+    cd $HOME/.dotfiles
+    git pull
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -97,12 +103,6 @@ export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/R
 export PS1_bac=$PS1
 source ~/anaconda/bin/activate ~/anaconda 2>&1 | grep -v anaconda
 export PS1=$PS1_bac
-
-# pull .dotfiles from git
-if [ -d "$HOME/.dotfiles" ]; then
-    cd $HOME/.dotfiles
-    git pull
-fi
 
 # iia6 mods
 if [[ `hostname -s` = iia* ]]; then
