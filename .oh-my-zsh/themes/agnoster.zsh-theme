@@ -27,7 +27,7 @@
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR=''
-SEGMENT_SEPARATOR=''
+#SEGMENT_SEPARATOR=''
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -160,9 +160,9 @@ prompt_virtualenv() {
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘ "
+  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡ "
+  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙ "
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
