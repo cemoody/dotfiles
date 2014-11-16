@@ -1,3 +1,13 @@
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+filetype on                          " try to detect filetypes
+
 "vim behavoir
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
@@ -7,7 +17,6 @@ nnoremap ; :
 
 "synatx on
 syntax on                           " syntax highlighing
-filetype on                          " try to detect filetypes
 filetype plugin indent on    " enable loading indent file for filetype
 
 "window splits and folding
