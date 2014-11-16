@@ -99,4 +99,7 @@ source ~/anaconda/bin/activate ~/anaconda 2>&1 | grep -v anaconda
 export PS1=$PS1_bac
 
 # iia6 mods
-unset LS_COLORS #iia6 reads the sys defaults in 
+if [[ `hostname -s` = iia* ]]; then
+    unset LS_COLORS #iia6 reads the sys defaults in 
+    source /data/ml/nfs/Development/exp/setup/dotfiles/bash/.bashrc
+fi
