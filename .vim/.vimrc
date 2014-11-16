@@ -6,6 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
+Bundle 'kien/ctrlp.vim' 
 filetype on                          " try to detect filetypes
 
 "vim behavoir
@@ -114,3 +115,6 @@ let g:airline#extensions#bufferline#overwrite_variables = 0
 let g:bufferline_echo = 0
 let g:bufferline_active_buffer_left = ''
 let g:bufferline_active_buffer_right = ''
+
+"ctrlp options
+let g:ctrlp_show_hidden = 1
