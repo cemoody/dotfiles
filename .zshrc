@@ -1,7 +1,7 @@
 # pull .dotfiles from git
 if [ -d "$HOME/.dotfiles" ]; then
     cd $HOME/.dotfiles
-    git pull
+    git pull origin master -q | grep -v 'Already up-to-date'
 fi
 
 # Path to your oh-my-zsh installation.
