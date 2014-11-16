@@ -50,7 +50,7 @@ export PYTHONPATH=$PYTHONPATH:/Users/cemoody/Development/data-science
 export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/
 
 source ~/anaconda/bin/activate ~/anaconda
-export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
+#export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
 
 
 #turn on VIM modw
