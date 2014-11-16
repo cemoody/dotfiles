@@ -55,6 +55,7 @@ map ,, :nohl
 
 " always have some lines of text when scrolling
 set scrolloff=5
+set nu
 
 "set tabs for python
 set ts=4
