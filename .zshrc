@@ -107,5 +107,11 @@ export PS1=$PS1_bac
 # iia6 mods
 if [[ `hostname -s` = iia* ]]; then
     unset LS_COLORS #iia6 reads the sys defaults in 
+    
+    # set http proxy stuff
     source /data/ml/nfs/Development/exp/setup/dotfiles/bash/.bashrc
+
+    # set to local vim
+    export VIMRUNTIME=~/app/vim/runtime
+    export PATH=~/app/vim/src/:$PATH
 fi
