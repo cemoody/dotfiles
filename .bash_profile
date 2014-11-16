@@ -36,8 +36,8 @@ else
 	export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
 fi
 
-alias unity="ssh-add && ssh -Nv -L3306:localhost:3306 fia17.sjc1b.square"
-alias unity20='ssh-add && ssh -Nv -L3307:localhost:3306 fia20.sjc1b.square'
+alias unity25="ssh-add && ssh -Nv -L3306:localhost:3306 fia25.sjc1b.square"
+alias unity26='ssh-add && ssh -Nv -L3307:localhost:3306 fia26.sjc1b.square'
 alias pi='ssh pi@chrisemoody.no-ip.biz'
 
 export EDITOR=vim
@@ -48,6 +48,10 @@ export DATABASE_PORT_HIVE=10000
 export DATABASE_NAME_HIVE='wd_cemoody'
 export PYTHONPATH=$PYTHONPATH:/Users/cemoody/Development/data-science
 export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/
+
+source ~/anaconda/bin/activate ~/anaconda
+export PS1='\[\e[0;37m\]\w\[\e[0m\]\[\e[1;36m\]$(__git_ps1 " %s")\[\e[0m\] '
+
 
 #turn on VIM modw
 set -o vi
