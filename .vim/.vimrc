@@ -110,3 +110,5 @@ set encoding=utf-8
 
 "use bufferline to display inline buffers
 let g:airline#extensions#bufferline#overwrite_variables = 0
+" bufferline should *not* print out to the command line
+let g:bufferline_echo = 0
