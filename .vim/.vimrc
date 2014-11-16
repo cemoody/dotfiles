@@ -7,6 +7,7 @@ Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim' 
+Bundle 'scrooloose/syntastic'
 filetype on                          " try to detect filetypes
 
 "vim behavoir
@@ -63,8 +64,8 @@ set tabstop=4
 set softtabstop=4 shiftwidth=4 expandtab
 
 "setup 80chc highlight
-match ErrorMsg '\%>80v.\+'
-set cursorline
+"match ErrorMsg '\%>80v.\+'
+"set cursorline
 
 "lycosexplorer
 set hidden
@@ -119,3 +120,6 @@ let g:bufferline_active_buffer_right = ''
 
 "ctrlp options
 let g:ctrlp_show_hidden = 1
+
+"csv.vim options
+" let g:csv_autocmd_arrange = 1
