@@ -93,6 +93,7 @@ export PATH="/Users/cemoody/anaconda/bin:/Users/cemoody/.rvm/gems/ruby-2.0.0-p35
 alias unity25="ssh-add && ssh -Nv -L3306:localhost:3306 fia25.sjc1b.square"
 alias unity26='ssh-add && ssh -Nv -L3307:localhost:3306 fia26.sjc1b.square'
 alias pi='ssh pi@chrisemoody.no-ip.biz'
+alias ll='ls -alh'
 
 export EDITOR=vim
 export DATABASE_HOST_HIVE='gun7.sjc1c.square'
