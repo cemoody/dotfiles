@@ -1,8 +1,11 @@
+# this adds the path fore coreutils, which includes timeout
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+
 # pull .dotfiles from git
 if [ -d "$HOME/.dotfiles" ]; then
     cd $HOME/.dotfiles
-    git pull origin master -q | grep -v 'Already up-to-date'
-    git submodule update --init --recursive
+    timeout 3 git pull origin master -q | grep -v 'Already up-to-date'
+    timeout 3 git submodule update --init --recursive
 fi
 
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh_custom
@@ -61,6 +64,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="/Users/cemoody/anaconda/bin:/Users/cemoody/.rvm/gems/ruby-2.0.0-p353/bin:/Users/cemoody/.rvm/bin:/Users/cemoody/Development/topsoil/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/cemoody/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/usr/local/sbin:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/"
+# this adds the path fore coreutils, which includes timeout
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
