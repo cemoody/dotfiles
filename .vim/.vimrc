@@ -8,6 +8,7 @@ Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim' 
 Bundle 'scrooloose/syntastic'
+Bundle 'terryma/vim-multiple-cursors'
 filetype on                          " try to detect filetypes
 
 "vim behavoir
@@ -120,6 +121,10 @@ let g:bufferline_active_buffer_right = ''
 
 "ctrlp options
 let g:ctrlp_show_hidden = 1
+
+"so you can type gq to reformat lines
+set tw=80
+
 
 "csv.vim options
 " let g:csv_autocmd_arrange = 1

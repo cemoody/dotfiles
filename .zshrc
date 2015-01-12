@@ -110,10 +110,6 @@ export DATABASE_NAME_HIVE='wd_cemoody'
 export PYTHONPATH=$PYTHONPATH:/Users/cemoody/Development/data-science
 export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/
 
-export PS1_bac=$PS1
-source ~/anaconda/bin/activate ~/anaconda 2>&1 | grep -v anaconda
-export PS1=$PS1_bac
-
 # iia6 mods
 if [[ `hostname -s` = iia* ]]; then
     unset LS_COLORS #iia6 reads the sys defaults in 
@@ -126,3 +122,8 @@ if [[ `hostname -s` = iia* ]]; then
     export PATH=~/app/vim/src/:$PATH
 fi
 
+export PS1_bac=$PS1
+source ~/anaconda/bin/activate ~/anaconda 
+export PS1=$PS1_bac
+
+cd ~
