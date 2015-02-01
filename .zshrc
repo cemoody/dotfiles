@@ -123,7 +123,11 @@ if [[ `hostname -s` = iia* ]]; then
 fi
 
 export PS1_bac=$PS1
+export PATH=$PATH:~/anaconda/bin
 source ~/anaconda/bin/activate ~/anaconda 
+echo "loaded anaconda"
 export PS1=$PS1_bac
+
+source ~/.zshrc_password
 
 cd ~
