@@ -142,3 +142,5 @@ stty stop undef
 
 # Set LS colors
 eval `dircolors ~/.dotfiles/dircolors.ansi-light`
+
+source ~/.zshrc_local
