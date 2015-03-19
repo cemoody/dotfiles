@@ -9,6 +9,8 @@ Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim' 
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'benmills/vimux'
 filetype on                          " try to detect filetypes
 
 "vim behavoir
@@ -101,6 +103,10 @@ highlight Pmenu        ctermbg=240 ctermfg=12
 highlight PmenuSel     ctermbg=0   ctermfg=3
 highlight SpellBad     ctermbg=0   ctermfg=1
 
+" For using solarized
+set background=light
+colorscheme solarized
+
 "reset escape timeouts to reasonable times
 set timeoutlen=300 ttimeoutlen=0
 
@@ -128,3 +134,44 @@ set tw=80
 
 "csv.vim options
 " let g:csv_autocmd_arrange = 1
+
+ function! VimuxSlime()
+  call VimuxSendKeys("\%cpaste")
+  call VimuxSendKeys("Enter")
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+  call VimuxSendText("\n--\n")
+  call VimuxSendKeys("Enter")
+ endfunction
+
+" If text is selected, save it in the v buffer and send that buffer it to tmux
+vmap <C-s> "vy :call VimuxSlime()<CR>
+vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
+vmap <LocalLeader>s "vy :call VimuxSlime()<CR>
+
+" Select current paragraph and send it to tmux
+nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
+
+" Run the current file with rspec
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Prompt for a command to run
+map <Leader>vo :call VimuxOpenRunner()<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
+" Close vim tmux runner opened by VimuxRunCommand
+map <Leader>vq :VimuxCloseRunner<CR>
+
+" Interrupt any command running in the runner pane
+map <Leader>vx :VimuxInterruptRunner<CR>
+
+" Zoom the runner pane (use <bind-key> z to restore runner pane)
+map <Leader>vz :call VimuxZoomRunner()<CR>

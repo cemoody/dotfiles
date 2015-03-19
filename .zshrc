@@ -18,6 +18,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
+# ZSH_THEME="solarized-powerline"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -131,3 +132,13 @@ export PS1=$PS1_bac
 source ~/.zshrc_password
 
 cd ~
+
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/chrismoody/.boot2docker/certs/boot2docker-vm
+
+# to unmap ctrl-s, which is used to send vim code to ipython
+stty stop undef 
+
+# Set LS colors
+eval `dircolors ~/.dotfiles/dircolors.ansi-light`
