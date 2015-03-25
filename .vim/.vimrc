@@ -135,7 +135,7 @@ set tw=80
 "csv.vim options
 " let g:csv_autocmd_arrange = 1
 
- function! VimuxSlime()
+ function! VimuxSlimeIPy()
   call VimuxSendKeys("\%cpaste")
   call VimuxSendKeys("Enter")
   call VimuxSendText(@v)
@@ -144,10 +144,15 @@ set tw=80
   call VimuxSendKeys("Enter")
  endfunction
 
+ function! VimuxSlime()
+  call VimuxSendKeys("Enter")
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+ endfunction
+
 " If text is selected, save it in the v buffer and send that buffer it to tmux
-vmap <C-s> "vy :call VimuxSlime()<CR>
-vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
-vmap <LocalLeader>s "vy :call VimuxSlime()<CR>
+vmap <C-s> "vy :call VimuxSlimeIPy()<CR>
+vmap <C-x> "vy :call VimuxSlime()<CR>
 
 " Select current paragraph and send it to tmux
 nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
