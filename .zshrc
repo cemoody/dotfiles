@@ -113,7 +113,7 @@ export PATH=$PATH:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/R
 
 # iia6 mods
 if [[ `hostname -s` = iia* ]]; then
-    unset LS_COLORS #iia6 reads the sys defaults in 
+    unset LS_COLORS #iia6 reads the sys defaults in
     
     # set http proxy stuff
     source /data/ml/nfs/Development/exp/setup/dotfiles/bash/.bashrc
@@ -142,6 +142,9 @@ stty stop undef
 
 # Set LS colors
 eval `dircolors ~/.dotfiles/dircolors.ansi-light`
+
+# Add DIRLIBFM
+export DIRLIBFM=/Users/chrismoody/code/libfm
 
 source ~/.zshrc_local
 

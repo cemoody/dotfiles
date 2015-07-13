@@ -9,7 +9,7 @@ Bundle 'bling/vim-bufferline'
 Bundle 'kien/ctrlp.vim' 
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'edkolev/tmuxline.vim'
+" Bundle 'edkolev/tmuxline.vim'
 Bundle 'benmills/vimux'
 filetype on                          " try to detect filetypes
 
@@ -129,7 +129,7 @@ let g:bufferline_active_buffer_right = ''
 let g:ctrlp_show_hidden = 1
 
 "so you can type gq to reformat lines
-set tw=80
+" set tw=80
 
 
 "csv.vim options
@@ -180,3 +180,6 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
+
+" Remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
