@@ -1,3 +1,4 @@
 # make syminks for every dotfile into homedir
+# make symlink for vimrc
 # install flake8 for syntastic support; must be avilable in PATH
 # do vundle install for vim plugins
