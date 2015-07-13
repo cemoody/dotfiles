@@ -144,3 +144,12 @@ stty stop undef
 eval `dircolors ~/.dotfiles/dircolors.ansi-light`
 
 source ~/.zshrc_local
+
+export PATH=/home/moody/code/torch/install/bin:$PATH  # Added automatically by torch-dist
+export LD_LIBRARY_PATH=/home/moody/code/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/home/moody/code/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
+
+
+export PATH=/home/moody/code/torch/install/bin:$PATH  # Added automatically by torch-dist
+export LD_LIBRARY_PATH=/home/moody/code/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/home/moody/code/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
