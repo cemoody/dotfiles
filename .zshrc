@@ -1,5 +1,8 @@
 # this adds the path fore coreutils, which includes timeout
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+
+if which brew >/dev/null ; then
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH" 
+fi
 
 # pull .dotfiles from git
 if [ -d "$HOME/.dotfiles" ]; then
@@ -66,7 +69,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/Users/cemoody/anaconda/bin:/Users/cemoody/.rvm/gems/ruby-2.0.0-p353/bin:/Users/cemoody/.rvm/bin:/Users/cemoody/Development/topsoil/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/Users/cemoody/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/texbin:/usr/local/sbin:/Applications/Julia-0.3.0-prerelease-fb0bd5c3d1.app/Contents/Resources/julia/bin/"
 # this adds the path fore coreutils, which includes timeout
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+if which brew >/dev/null ; then
+    export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -125,11 +130,10 @@ fi
 
 export PS1_bac=$PS1
 export PATH=$PATH:~/anaconda/bin
-source ~/anaconda/bin/activate ~/anaconda 
-echo "loaded anaconda"
+source ~/anaconda/bin/activate ~/anaconda 2>/dev/null
 export PS1=$PS1_bac
 
-source ~/.zshrc_password
+source ~/.zshrc_password 2>/dev/null
 
 cd ~
 
@@ -146,7 +150,7 @@ eval `dircolors ~/.dotfiles/dircolors.ansi-light`
 # Add DIRLIBFM
 export DIRLIBFM=/Users/chrismoody/code/libfm
 
-source ~/.zshrc_local
+source ~/.zshrc_local 2>/dev/null
 
 export PATH=/home/moody/code/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/moody/code/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
