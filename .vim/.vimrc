@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'bling/vim-bufferline'
-Bundle 'kien/ctrlp.vim' 
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'terryma/vim-multiple-cursors'
 " Bundle 'edkolev/tmuxline.vim'
@@ -81,12 +81,12 @@ nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
 "switch to the pastels theme
-colorscheme pastels_coloration_v02
+" colorscheme pastels_coloration_v02
 set noantialias
 
 " For usung Base16
 set background=dark
-colorscheme base16-railscasts
+" colorscheme base16-railscasts
 
 highlight clear SignColumn
 highlight VertSplit    ctermbg=236
@@ -115,6 +115,8 @@ set clipboard=unnamed
 
 "airline
 let g:airline_powerline_fonts = 1
+let g:airline_section_y = 0
+let g:airline_section_x = 0
 set laststatus=2
 set encoding=utf-8
 
