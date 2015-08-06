@@ -1,9 +1,18 @@
 # make syminks for every dotfile into homedir
+for fn in ~/.dotfiles/.*; do echo $fn; ln -s $fn .; done
 # make symlink for vimrc
+ln -s ~/.dotfiles/.vim/.vimrc
 # install flake8 for syntastic support; must be avilable in PATH
+pip install flake8
 # do vundle install for vim plugins
-# do install prezto
-# setopt EXTENDED_GLOB
-# for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-#   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-# done
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+:BundleInstall
+# do install prezto https://github.com/sorin-ionescu/prezto
+sudo apt-get install zsh
+zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s /bin/zsh
