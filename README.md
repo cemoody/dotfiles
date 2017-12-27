@@ -1,15 +1,7 @@
-# Setup Neovim
+install neovim
 
-https://github.com/neovim/neovim/wiki/Installing-Neovim
+install neovim in ~/.config/nvim/init.vim
+install tmux conf
 
-# Navim Install
-
-https://github.com/taohex/navim#basic-installation
-
-# Modify .vimrc
-
-set background=light
-
-# Install tagbar
-
-https://thomashunter.name/blog/installing-vim-tagbar-with-macvim-in-os-x/
+install dein
+https://github.com/Shougo/dein.vim
